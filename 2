@@ -1,0 +1,23 @@
+insert = list(map(int,input("Insira dez números inteiros: ").split()))
+
+pares = []
+impares = []
+
+for c in insert:
+  if c % 2 == 0:
+    pares.append(c)
+  else:
+    impares.append(c)
+
+mediadosimpares = 0
+somadospares = 0
+
+for p in pares:
+  somadospares += p
+
+for i in impares:
+  mediadosimpares += i
+
+media = mediadosimpares/len(impares)
+
+print("Quantidade de números pares: %d\nQuantidade de números ímpares: %d\nSoma dos números pares obtidos: %d\nMédia dos números ímpares: %d" %(len(pares),len(impares), somadospares, media))
